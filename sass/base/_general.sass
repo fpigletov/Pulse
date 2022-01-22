@@ -1,0 +1,174 @@
+* 
+    padding: 0
+    margin: 0
+    border: 0
+
+*,
+*:before,
+*:after 
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+a:focus,
+a:active 
+	outline: none
+
+aside,
+nav,
+footer,
+header,
+section 
+	display: block
+html 
+	font-size: 62.5%
+html,
+body 
+	height: 100%
+	min-width: $min-width
+body 
+	line-height: 1
+	font-family: $font-family    
+	font-weight: 500
+	color: $black-color
+	-ms-text-size-adjust: 100%
+	-moz-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+
+input,
+button,
+textarea 
+	font-size: inherit
+	font-family: $font-family
+
+input::-ms-clear 
+	display: none;
+
+button 
+	cursor: pointer
+
+button::-moz-focus-inner 
+	padding: 0
+	border: 0
+
+a,
+a:visited 
+	text-decoration: none
+
+a:hover 
+	text-decoration: none
+
+ul li 
+	list-style: none
+
+img 
+	vertical-align: top
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+	font-weight: inherit
+	font-size: inherit
+
+.wrapper	
+	width: 100%
+	min-height: 100%
+	overflow: hidden
+	display: flex
+	flex-direction: column
+
+.page
+	flex: 1 1 auto		
+    
+
+.container
+	max-width: $max-width-container
+	padding: 0 1.5rem
+	margin: 0 auto
+	@media (max-width: $md3)
+		padding: 0 1rem
+
+.btn
+	display: inline-flex
+	cursor: pointer
+	background-color: $red-color
+	justify-content: center
+	align-items: center
+	color: $white-color
+	font-weight: 500
+	border-radius: 0.5rem
+	text-transform: uppercase
+	transition: background-color 0.3s ease 0s	
+	@media (any-hover: hover)
+		&:hover
+			background-color: #9c0b0b
+			
+
+.title
+	font-weight: 700
+	font-size: 3rem	
+	text-align: center
+	text-transform: uppercase
+	@media (max-width: $md4)
+		font-size: 2.4rem	
+
+.form
+	display: flex
+	flex-direction: column
+	max-width: 30.3rem
+
+	&__input 
+		height: 5rem
+		width: 100%
+		border-radius: 0.5rem
+		background-color: $white-color
+		font-size: 1.4rem
+		color: #4B4B4B
+		padding: 1.5rem 2rem
+		border: none
+		margin-bottom: 1.5rem
+		&:last-child
+			margin-bottom: 2rem
+
+	&__button 
+		width: 100%
+		height: 5.5rem
+		padding: 0 4.2rem
+		font-size: 1.6rem
+		@media (max-width: $md4)
+			padding: 0 4rem
+
+.error            //поле из валидации
+	color: $red-color
+	padding-bottom: 1.2rem
+	border: 0.2rem solid $red-color
+label.error 
+	border: none        
+
+
+.scroll-up
+	position: fixed		
+	bottom: 5rem
+	right: 5rem	
+	display: none
+	z-index: 1000
+
+	&__link		
+		display: inline-block		
+		width: 8rem
+		height: 8rem		
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	@media (max-width: $md4)
+		bottom: 3rem
+		right: 3rem	
+
+
+
+
+

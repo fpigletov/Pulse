@@ -1,0 +1,192 @@
+.catalog
+    padding-bottom: 7.9rem
+    @media (max-width: $md4)
+            padding-bottom: 6rem
+
+    &__container 
+
+    &__title 
+        margin-bottom: 5.6rem
+
+    &__tabs 
+        margin-bottom: 5.8rem
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+        @media (max-width: $md4)
+            margin-bottom: 4rem
+
+    &__tab 
+        width: 22rem
+        height: 5rem            
+        border: 0.2rem solid #D0D0D0        
+        display: flex
+        justify-content: center
+        align-items: center            
+        text-align: center        
+        transform: skewX(-25deg)
+        margin: 0 0.5rem
+        cursor: pointer
+        transition: all 0.3s ease 0s
+        @media (any-hover: hover)
+            &:hover
+                box-shadow: 0 0 1rem $red-color
+                border: none
+        &.active
+            background-color: $red-color            
+            box-shadow: 0 0 1rem $red-color
+            border: none
+            .catalog__element
+                color: $white-color
+        @media (max-width: $md3)
+            margin-bottom: 0.5rem
+
+    &__element
+        text-transform: uppercase
+        color: #6B6B6B
+        font-size: 1.8rem
+        transform: skewX(25deg)
+
+    &__content 
+        display: none        
+        grid-template-columns: repeat(auto-fit, 30.3rem)
+        grid-template-rows: minmax(44.2rem, 1fr)
+        grid-auto-flow: row
+        column-gap: 1.7rem
+        row-gap: 1.9rem 
+        justify-content: center
+        @media (max-width: $md4)
+            grid-template-columns: repeat(auto-fit, 30rem)
+        &.active
+            display: grid
+
+    &__item 
+        border: 0.2rem solid #E8E8E8
+        padding: 2rem
+        overflow: hidden
+
+.item-catalog     
+
+    &__wrapper        
+        display: flex
+        width: calc(200% + 4rem)        
+
+    &__info    
+        display: flex    
+        flex-direction: column 
+        align-items: center
+        border-bottom: 0.1rem solid #E8E8E8        
+        width: 50%
+        margin-left: 2rem
+        padding: 0 2rem 1.7rem 1.7rem
+        transform: translateX(0)
+        transition: all 0.3s ease 0s
+        &.active
+            transform: translateX(-100%)
+            margin-left: 0
+
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 50%
+        margin-right: 2rem
+        transform: translateX(0)
+        transition: all 0.3s ease 0s
+        &.active
+            transform: translateX(-100%)
+            margin-right: 0
+       
+
+
+    &__list 
+        flex: 1 1 auto
+
+    &__element 
+        position: relative
+        font-weight: 300
+        font-size: 1.4rem
+        line-height: 150%        
+        color: #555555
+        margin-bottom: 0.5rem
+        &:last-child
+            margin-bottom: 0
+        &:before
+            content: ''
+            position: absolute
+            top: 0.6rem
+            left: -1.7rem
+            width: 0.8rem
+            height: 0.8rem           
+            background: $red-color
+
+        
+    &__image 
+        width: 14rem
+        height: 20rem        
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__body
+        
+        display: flex
+        flex-direction: column  
+        text-align: center
+        padding: 1.5rem 0 1.7rem
+        border-bottom: 0.1rem solid #E8E8E8
+
+    &__title
+        font-weight: bold
+        font-size: 1.6rem
+        line-height: 156.25% 
+        margin-bottom: 1.5rem
+
+    &__text 
+        font-weight: 300
+        font-size: 1.4rem
+        line-height: 157.142%
+        margin-bottom: 1rem
+        flex: 1 1 auto
+
+    &__link
+        display: inline-block        
+        font-size: 1.4rem
+        cursor: pointer
+        color: $red-color        
+        text-decoration-color: rgba(199, 1, 1, 0)
+        transition: all 0.3s ease 0s
+        @media (any-hover)
+            &:hover
+                text-decoration: underline
+                text-decoration-color: rgba(199, 1, 1, 1)        
+
+    &__footer
+        display: flex
+        justify-content: space-between
+        padding-top: 1.8rem
+        width: 100%
+
+    &__prices
+
+    &__price
+
+        &_old
+            font-weight: 300
+            font-size: 1.4rem            
+            text-decoration-line: line-through
+            color: #555555 
+            margin-bottom: 0.2rem
+
+        &_new 
+            font-weight: bold
+            font-size: 2rem            
+            color: #050505   
+
+    &__button 
+        height: 4rem
+        padding: 0 4rem
+        font-size: 1.4rem
+        text-transform: uppercase

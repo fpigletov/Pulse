@@ -1,0 +1,45 @@
+.modals
+    display: none
+    position: fixed
+    top: 0
+    left: 0
+    background-color: rgba( 0, 0, 0, 0.56) 
+    width: 100%
+    height: 100%
+    z-index: 20
+
+    &__modal 
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 38rem
+        transform: translate(-50%, -50%)
+        background: #F2F2F2
+        padding: 3.9em 3.9rem 4.2rem 3.9rem
+        text-align: center        
+
+.modal 
+
+    &__close 
+        cursor: pointer
+        position: absolute
+        top: -1rem
+        right: -4rem
+        font-size: 4rem
+        color: $red-color
+       
+
+    &__title
+        font-weight: bold
+        font-size: 1.9rem
+        margin-bottom: 1rem
+
+    &__subtitle 
+        font-weight: bold
+        font-size: 1.4rem        
+
+    &__form
+        margin-top: 2.6rem        
+
+#consultation, #order, #thanks
+    display: none
